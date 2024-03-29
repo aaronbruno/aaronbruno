@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Favicons (img/logo for browser tab)-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- ---------- Page Title ---------- -->
+    <title>Aaron's Portfolio</title>
+  </head>
+
+  <body>
+    <!-- ---------- Sidebar Menu ---------- -->
+    <div class="off-screen-menu">
+      <ul class="off-screen-content">
+        <li><a href="#about-me" class="nav-link">About</a></li>
+        <li>
+          <a href="#professional-projects" class="nav-link"
+            >Professional Projects</a
+          >
+        </li>
+        <li>
+          <a href="#personal-projects" class="nav-link">Personal Projects</a>
+        </li>
+        <li>
+          <a
+            href="assets/resume/ResumePg1.pdf"
+            class="nav-link"
+            download="ResumePg1.pdf"
+            >Resume</a
+          >
+        </li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>‎</li>
+        <li>‎</li>
+      </ul>
+    </div>
+
+    <!-- ---------- Navbar Section ---------- -->
+    <nav>
+      <ul class="logo">
+        <div class="nav-tile">
+          <li>
+            <a href="#home" class="logo">Aaron Bruno</a>
+          </li>
+        </div>
+      </ul>
+
+      <ul class="navigation">
+        <div class="nav-tile">
+          <li><a href="#about-me" class="nav-link">About</a></li>
+        </div>
+        <div class="nav-tile">
+          <li>
+            <a href="#professional-projects" class="nav-link"
+              >Professional Projects</a
+            >
+          </li>
+        </div>
+        <div class="nav-tile">
+          <li>
+            <a href="#personal-projects" class="nav-link">Personal Projects</a>
+          </li>
+        </div>
+        <div class="nav-tile">
+          <li>
+            <a
+              href="assets/resume/ResumePg1.pdf"
+              class="nav-link"
+              download="ResumePg1.pdf"
+              >Resume</a
+            >
+          </li>
+        </div>
+        <div class="nav-tile">
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </div>
+      </ul>
+
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <script>
+      const hamMenu = document.querySelector(".ham-menu");
+      const offScreenMenu = document.querySelector(".off-screen-menu");
+
+      hamMenu.addEventListener("click", () => {
+        hamMenu.classList.toggle("active");
+        offScreenMenu.classList.toggle("active");
+      });
+
+      offScreenMenu.addEventListener("click", () => {
+        hamMenu.classList.toggle("active");
+        offScreenMenu.classList.toggle("active");
+      });
+
+      /* if the screen is bigger than 1000px remove the off-screen menu */
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 1000) {
+          offScreenMenu.classList.remove("active");
+          hamMenu.classList.remove("active");
+        }
+      });
+    </script>
+
+    <!-- ---------- Home Section ---------- -->
+    <section class="home" id="home">
+      <video class="home-video" autoplay loop muted>
+        <source src="assets/videos/BALLISTIC-home.mp4" type="video/mp4" />
+      </video>
+    </section>
+
+    <!-- ---------- About Me Section ---------- -->
+    <section class="about-me" id="about-me">
+      <h2 class="bio-title">About Me</h2>
+      <div class="about-me-content">
+        <div class="about-me-icon"></div>
+        <div class="bio-description">
+          <p class="bio-text">
+            Hey, I'm Aaron! I'm a senior undergraduate student at UC Santa Cruz
+            majoring in Computer Science: Game Design. I am most interested in
+            game programming and level design but I am familiar with other
+            aspects of game design such as 3D modeling and animation. I am
+            currently working in a team of 9 on Ballistic, a 3rd person
+            dodgeball party game, as a part of my senior capstone project!
+          </p>
+          <p class="bio-text-1">
+            This website is dedicated to showcasing some of the projects I have
+            worked on. I am passionate about creating fun and engaging
+            experiences for players, I always consider the player's experience
+            and every little detail that contributes to that experience. Besides
+            creating and playing games, I enjoy spending time with family and
+            friends, reading books, and watching movies.
+          </p>
+          <p class="bio-text-2">
+            I hope you enjoy looking through my projects and learning more about
+            me!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Professional Projects Section ---------- -->
+    <section class="professional-projects" id="professional-projects">
+      <h2 class="projects-title">Professional Projects</h2>
+      <h3 class="projects-subtitle">Click on each tile to learn more.</h3>
+    </section>
+
+    <section class="prof-projects" id="prof-projects">
+      <a href="projects/Ballistic.html" class="prof-project-tile-1">
+        <!-- <h3 class="prof-project-title">Ballistic</h3> -->
+        <section class="prof-project-description">
+          <div class="prof-project-description-tile-red">C#</div>
+          <div class="prof-project-description-tile-blue">Unity</div>
+          <div class="prof-project-description-tile-purple">Level Design</div>
+          <div class="prof-project-description-tile-pink">gamedev</div>
+          <div class="prof-project-description-tile-pink">University</div>
+        </section>
+        <section class="prof-project-description-1">
+          <p>
+            A 3rd person multiplayer dodgeball party game with a wide variety of
+            maps and ball buffs
+          </p>
+        </section>
+
+        <ul class="prof-project-description-2">
+          My Contributions:
+          <li>- Designed and implemented levels</li>
+          <li>- Created ragdoll physics</li>
+          <li>- Character design, model and animations</li>
+          <li>- Contributed to main movement programming</li>
+          <li>- Created and maintained documentation</li>
+          <li>
+            - Collaborated with team members to create a fun and engaging
+            experience
+          </li>
+        </ul>
+      </a>
+
+      <a href="projects/WitchCraft.html" class="prof-project-tile-2">
+        <!-- <h3 class="prof-project-title">Witch Craft</h3> -->
+        <section class="prof-project-description">
+          <div class="prof-project-description-tile-red">C#</div>
+          <div class="prof-project-description-tile-blue">Unity</div>
+          <div class="prof-project-description-tile-purple">Level Design</div>
+          <div class="prof-project-description-tile-pink">gamedev</div>
+          <div class="prof-project-description-tile-pink">University</div>
+        </section>
+        <section class="prof-project-description-1">
+          <p>
+            A 3rd person singleplayer magic shooter rogue-lite with a crafting
+            system
+          </p>
+        </section>
+
+        <ul class="prof-project-description-2">
+          My Contributions:
+          <li>- Main menu level design and implementation</li>
+          <li>- Main menu UI</li>
+          <li>- Character design and model</li>
+          <li>- Enemy design, model and animations</li>
+          <li>- Created and maintained documentation</li>
+          <li>
+            - Collaborated with team members to create a fun and engaging
+            experience
+          </li>
+        </ul>
+      </a>
+
+      <a href="projects/SideHustleSimulator.html" class="prof-project-tile-3">
+        <h3 class="prof-project-title"></h3>
+        <h3 class="prof-project-title-1"></h3>
+        <section class="prof-project-description">
+          <div class="prof-project-description-tile-red">C#</div>
+          <div class="prof-project-description-tile-blue">Unity</div>
+          <div class="prof-project-description-tile-purple">Level Design</div>
+          <div class="prof-project-description-tile-pink">gamedev</div>
+          <div class="prof-project-description-tile-pink">University</div>
+        </section>
+        <section class="prof-project-description-1">
+          <p>
+            A 2D singleplayer idle/tapping game with body-horror and
+            hyper-inflation/debt sarcasm
+          </p>
+        </section>
+
+        <ul class="prof-project-description-2">
+          My Contributions:
+          <li>- UI design and programming</li>
+          <li>- Game design: game loops</li>
+          <li>‎</li>
+          <li>‎</li>
+          <li>‎</li>
+          <li>‎</li>
+          <li>‎</li>
+        </ul>
+      </a>
+
+      <a href="projects/ChronoCart.html" class="prof-project-tile-4">
+        <!-- <h3 class="prof-project-title">ChronoCart</h3> -->
+        <section class="prof-project-description">
+          <div class="prof-project-description-tile-red">JavaScript</div>
+          <div class="prof-project-description-tile-blue">Phaser3</div>
+          <div class="prof-project-description-tile-purple">Artist</div>
+          <div class="prof-project-description-tile-pink">gamedev</div>
+          <div class="prof-project-description-tile-pink">University</div>
+        </section>
+        <section class="prof-project-description-1">
+          <p>
+            A 2D singpleplayer infinite runner where you can transform the
+            terrain to help you progress
+          </p>
+        </section>
+
+        <ul class="prof-project-description-2">
+          My Contributions:
+          <li>- All pixel art</li>
+          <li>- Game design</li>
+          <li>‎</li>
+          <li>‎</li>
+          <li>‎</li>
+          <li>‎</li>
+          <li>‎</li>
+        </ul>
+      </a>
+    </section>
+
+    <!-- ---------- Personal Projects Section ---------- -->
+    <section class="personal-projects" id="personal-projects">
+      <h2 class="projects-title">Personal Projects</h2>
+      <h3 class="projects-subtitle">Click on each tile to learn more.</h3>
+    </section>
+    <section class="pers-projects" id="pers-projects">
+      <div class="pers-project-tile-1">
+        <h3 class="project-title">First person movement shooter</h3>
+        <section class="pers-project-description">
+          <div class="pers-project-description-tile-red">C#</div>
+          <div class="pers-project-description-tile-blue">Unity</div>
+          <div class="pers-project-description-tile-pink">gamedev</div>
+          <div class="pers-project-description-tile-pink">solo</div>
+        </section>
+        <section class="pers-project-description-1">
+          <p>
+            A 3D third person extraction shooter where you can move around and
+            shoot targets
+          </p>
+        </section>
+        <ul class="pers-project-description-2">
+          Highlights:
+          <li>- Gameplay programming</li>
+          <li>- Designed and implemented weapons system</li>
+          <li>- Designed and implemented AI behavior</li>
+          <li>- Character design, model and animations</li>
+          <li>- Designed and implemented maps and levels</li>
+          <li>- Created and maintained documentation</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ??? Skills Section ??? -->
+
+    <!-- ---------- Resume Section ---------- -->
+
+    <!-- ---------- Contact Section ---------- -->
+    <section class="contact" id="contact">
+      <h2 class="contact-title">Contact Info</h2>
+      <p class="contact-text">
+        You can contact me at my email: aaronbruno2024@gmail.com or through my
+        <a href="https://www.linkedin.com/in/aaron-bruno/">LinkedIn</a>
+        .
+      </p>
+    </section>
+
+    <!-- ---------- Footer Section ---------- -->
+    <footer>
+      <div class="footer">
+        <p class="footer-content">
+          Copyright © 2024 by Aaron Bruno. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Website scripts -->
+    <script src="app.js"></script>
+
+    <!-- External scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

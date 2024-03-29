@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- Favicons (img/logo for browser tab)-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Page Title -->
+    <title>Aaron's Portfolio</title>
+  </head>
+
+  <body>
+    <!-- ---------- Sidebar Menu ---------- -->
+    <div class="off-screen-menu">
+      <ul class="off-screen-content">
+        <li><a href="/index.html#about-me" class="nav-link">About</a></li>
+        <li>
+          <a href="/index.html#professional-projects" class="nav-link"
+            >Professional Projects</a
+          >
+        </li>
+        <li>
+          <a href="/index.html#personal-projects" class="nav-link"
+            >Personal Projects</a
+          >
+        </li>
+        <li>
+          <a
+            href="assets/Aaron_Bruno_Resume.pdf"
+            class="nav-link"
+            download="Aaron_Bruno_Resume.pdf"
+            >Resume</a
+          >
+        </li>
+        <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+        <li>‎</li>
+        <li>‎</li>
+      </ul>
+    </div>
+
+    <!-- ---------- Navbar Section ---------- -->
+    <nav>
+      <ul class="logo">
+        <div class="nav-tile">
+          <li>
+            <a href="/index.html#home" class="logo">Aaron Bruno</a>
+          </li>
+        </div>
+      </ul>
+
+      <ul class="navigation">
+        <div class="nav-tile">
+          <li><a href="/index.html#about-me" class="nav-link">About</a></li>
+        </div>
+        <div class="nav-tile">
+          <li>
+            <a href="/index.html#professional-projects" class="nav-link"
+              >Professional Projects</a
+            >
+          </li>
+        </div>
+        <div class="nav-tile">
+          <li>
+            <a href="/index.html#personal-projects" class="nav-link"
+              >Personal Projects</a
+            >
+          </li>
+        </div>
+        <div class="nav-tile">
+          <li>
+            <a
+              href="assets/Aaron_Bruno_Resume.pdf"
+              class="nav-link"
+              download="Aaron_Bruno_Resume.pdf"
+              >Resume</a
+            >
+          </li>
+        </div>
+        <div class="nav-tile">
+          <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+        </div>
+      </ul>
+
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <script>
+      const hamMenu = document.querySelector(".ham-menu");
+      const offScreenMenu = document.querySelector(".off-screen-menu");
+
+      hamMenu.addEventListener("click", () => {
+        hamMenu.classList.toggle("active");
+        offScreenMenu.classList.toggle("active");
+      });
+
+      offScreenMenu.addEventListener("click", () => {
+        hamMenu.classList.toggle("active");
+        offScreenMenu.classList.toggle("active");
+      });
+
+      /* if the screen is bigger than 1000px remove the off-screen menu */
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 1000) {
+          offScreenMenu.classList.remove("active");
+          hamMenu.classList.remove("active");
+        }
+      });
+    </script>
+
+    <!--Side-Hustle Simulator Content -->
+
+    <section
+      class="chronocart-background-img"
+      id="chronocart-background-img"
+    ></section>
+    <section class="chronocart-background-box">
+      <div class="chronocart-content">
+        <div class="chronocart-title">Chrono Cart</div>
+        <div class="chronocart-type-description">
+          <ul class="chronocart-head">
+            <li>Project Status:</li>
+            <li>Project Type:</li>
+            <li>Project Duration:</li>
+            <li>Software Used:</li>
+            <li>Languages:</li>
+            <li>Primary Roles:</li>
+          </ul>
+          <ul class="chronocart-tail">
+            <li>Stopped / Finished Pre-production</li>
+            <li>University / group</li>
+            <li>~3 weeks</li>
+            <li>Phaser 3</li>
+            <li>JavaScript</li>
+            <li>Art Lead & Game Designer</li>
+          </ul>
+        </div>
+        <div class="chronocart-description">
+          <p>
+            Chrono Cart is a project I was apart of as the Art Lead and Game
+            Designer during my junior year at UCSC. I was working with 2 others
+            on this project over the course of 3 weeks as part of our final
+            project for CMPM120. The theme that was given to us was "Nearby in
+            Space, Distance in Time". Chrono Cart has the player traversing the
+            same level on repeated playthroughs. Any objects they place on the
+            level also persist, meaning that each playthrough is distance in
+            time but shares the same space.
+          </p>
+        </div>
+
+        <iframe
+          class="chronocart-video"
+          src="https://www.youtube.com/embed/B5u5Qx8WnZE?si=VJuGSc0-yPQZUEMm"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+
+        <div class="chronocart-description-2">
+          <p class="chronocart-link-1">
+            <a href="https://atumemot.itch.io/chronocart" target="_blank"
+              >Click to play the latest version of Chrono Cart!</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer">
+        <p class="footer-content">
+          Copyright © 2024 by Aaron Bruno. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Website scripts -->
+    <script src="app.js"></script>
+
+    <!-- External scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- Favicons (img/logo for browser tab)-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Page Title -->
+    <title>Aaron's Portfolio</title>
+  </head>
+
+  <body>
+    <!-- ---------- Sidebar Menu ---------- -->
+    <div class="off-screen-menu">
+      <ul class="off-screen-content">
+        <li><a href="/index.html#about-me" class="nav-link">About</a></li>
+        <li>
+          <a href="/index.html#professional-projects" class="nav-link"
+            >Professional Projects</a
+          >
+        </li>
+        <li>
+          <a href="/index.html#personal-projects" class="nav-link"
+            >Personal Projects</a
+          >
+        </li>
+        <li>
+          <a
+            href="assets/Aaron_Bruno_Resume.pdf"
+            class="nav-link"
+            download="Aaron_Bruno_Resume.pdf"
+            >Resume</a
+          >
+        </li>
+        <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+        <li>‎</li>
+        <li>‎</li>
+      </ul>
+    </div>
+
+    <!-- ---------- Navbar Section ---------- -->
+    <nav>
+      <ul class="logo">
+        <div class="nav-tile">
+          <li>
+            <a href="/index.html#home" class="logo">Aaron Bruno</a>
+          </li>
+        </div>
+      </ul>
+
+      <ul class="navigation">
+        <div class="nav-tile">
+          <li><a href="/index.html#about-me" class="nav-link">About</a></li>
+        </div>
+        <div class="nav-tile">
+          <li>
+            <a href="/index.html#professional-projects" class="nav-link"
+              >Professional Projects</a
+            >
+          </li>
+        </div>
+        <div class="nav-tile">
+          <li>
+            <a href="/index.html#personal-projects" class="nav-link"
+              >Personal Projects</a
+            >
+          </li>
+        </div>
+        <div class="nav-tile">
+          <li>
+            <a
+              href="assets/Aaron_Bruno_Resume.pdf"
+              class="nav-link"
+              download="Aaron_Bruno_Resume.pdf"
+              >Resume</a
+            >
+          </li>
+        </div>
+        <div class="nav-tile">
+          <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+        </div>
+      </ul>
+
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <script>
+      const hamMenu = document.querySelector(".ham-menu");
+      const offScreenMenu = document.querySelector(".off-screen-menu");
+
+      hamMenu.addEventListener("click", () => {
+        hamMenu.classList.toggle("active");
+        offScreenMenu.classList.toggle("active");
+      });
+
+      offScreenMenu.addEventListener("click", () => {
+        hamMenu.classList.toggle("active");
+        offScreenMenu.classList.toggle("active");
+      });
+
+      /* if the screen is bigger than 1000px remove the off-screen menu */
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 1000) {
+          offScreenMenu.classList.remove("active");
+          hamMenu.classList.remove("active");
+        }
+      });
+    </script>
+
+    <!--Side-Hustle Simulator Content -->
+
+    <section
+      class="sidehustle-background-img"
+      id="sidehustle-background-img"
+    ></section>
+    <section class="sidehustle-background-box">
+      <div class="sidehustle-content">
+        <div class="sidehustle-title">Side-Hustle Simulator</div>
+        <div class="sidehustle-type-description">
+          <ul class="sidehustle-head">
+            <li>Project Status:</li>
+            <li>Project Type:</li>
+            <li>Project Duration:</li>
+            <li>Software Used:</li>
+            <li>Languages:</li>
+            <li>Primary Roles:</li>
+          </ul>
+          <ul class="sidehustle-tail">
+            <li>Stopped / Finished Pre-production</li>
+            <li>University / group</li>
+            <li>~3 weeks</li>
+            <li>Unity</li>
+            <li>C#</li>
+            <li>UI Designer and Programmer</li>
+          </ul>
+        </div>
+        <div class="sidehustle-description">
+          <p>
+            Side-Hustle Simulator is a project I was apart of as the UI Designer
+            and Programmer during my junior year at UCSC. I was working with 2
+            others on this project over the course of 3 weeks as part of our
+            final project for ARTG120. We decided to heavily play into the idea
+            of being in seemingly unending debt and making body modifications
+            and upgrades to be able to make more money.
+          </p>
+        </div>
+
+        <iframe
+          class="sidehustle-video"
+          src="https://www.youtube.com/embed/OvW4dFqoNVQ?si=5iI_S7QcH5SxlGYK"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+
+        <div class="sidehustle-description-2">
+          <p class="sidehustle-link-1">
+            <a
+              href="https://aaronbruno.itch.io/side-hustle-simulator"
+              target="_blank"
+              >Click to play the latest version of Side-Hustle Simulator!</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer">
+        <p class="footer-content">
+          Copyright © 2024 by Aaron Bruno. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Website scripts -->
+    <script src="app.js"></script>
+
+    <!-- External scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
