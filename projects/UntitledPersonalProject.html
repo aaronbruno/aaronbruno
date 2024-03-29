@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- Favicons (img/logo for browser tab)-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Page Title -->
+    <title>Aaron's Portfolio</title>
+  </head>
+
+  <body>
+    <!-- ---------- Sidebar Menu ---------- -->
+    <div class="off-screen-menu">
+      <ul class="off-screen-content">
+        <li><a href="../index.html#about-me" class="nav-link">About</a></li>
+        <li>
+          <a href="../index.html#professional-projects" class="nav-link"
+            >Professional Projects</a
+          >
+        </li>
+        <li>
+          <a href="../index.html#personal-projects" class="nav-link"
+            >Personal Projects</a
+          >
+        </li>
+        <li>
+          <a
+            href="../assets/resume/AaronBruno-Resume.pdf"
+            class="nav-link"
+            download="AaronBruno-Resume.pdf"
+            >Resume</a
+          >
+        </li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li>‎</li>
+        <li>‎</li>
+      </ul>
+    </div>
+
+    <!-- ---------- Navbar Section ---------- -->
+    <nav>
+      <ul class="logo">
+        <div class="nav-tile">
+          <li>
+            <a href="../index.html#home" class="logo">Aaron Bruno</a>
+          </li>
+        </div>
+      </ul>
+
+      <ul class="navigation">
+        <div class="nav-tile">
+          <li><a href="../index.html#about-me" class="nav-link">About</a></li>
+        </div>
+        <div class="nav-tile">
+          <li>
+            <a href="../index.html#professional-projects" class="nav-link"
+              >Professional Projects</a
+            >
+          </li>
+        </div>
+        <div class="nav-tile">
+          <li>
+            <a href="../index.html#personal-projects" class="nav-link"
+              >Personal Projects</a
+            >
+          </li>
+        </div>
+        <div class="nav-tile">
+          <li>
+            <a
+              href="../assets/resume/AaronBruno-Resume.pdf"
+              class="nav-link"
+              download="AaronBruno-Resume.pdf"
+              >Resume</a
+            >
+          </li>
+        </div>
+        <div class="nav-tile">
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </div>
+      </ul>
+
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <script>
+      const hamMenu = document.querySelector(".ham-menu");
+      const offScreenMenu = document.querySelector(".off-screen-menu");
+
+      hamMenu.addEventListener("click", () => {
+        hamMenu.classList.toggle("active");
+        offScreenMenu.classList.toggle("active");
+      });
+
+      offScreenMenu.addEventListener("click", () => {
+        hamMenu.classList.toggle("active");
+        offScreenMenu.classList.toggle("active");
+      });
+
+      /* if the screen is bigger than 1000px remove the off-screen menu */
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 1000) {
+          offScreenMenu.classList.remove("active");
+          hamMenu.classList.remove("active");
+        }
+      });
+    </script>
+
+    <!--Side-Hustle Simulator Content -->
+
+    <section
+      class="untitled-background-img"
+      id="untitled-background-img"
+    ></section>
+    <section class="untitled-background-box">
+      <div class="untitled-content">
+        <div class="untitled-title">Untitled Game</div>
+        <div class="untitled-type-description">
+          <ul class="untitled-head">
+            <li>Project Status:</li>
+            <li>Project Type:</li>
+            <li>Project Duration:</li>
+            <li>Software Used:</li>
+            <li>Languages:</li>
+            <li>Primary Roles:</li>
+          </ul>
+          <ul class="untitled-tail">
+            <li>In-Progress / pre-alpha</li>
+            <li>University / Solo</li>
+            <li>~3 weeks in total so far</li>
+            <li>Unity</li>
+            <li>C#</li>
+            <li>Everything</li>
+          </ul>
+        </div>
+        <div class="untitled-description">
+          <p>
+            "Untitled Game" was a project I started during my senior year at
+            UCSC as part of an individual weekly project for one of my classes,
+            CMPM125. My goal was to prototype a first person movement shooter
+            that has enemies that have smart detection and a wide-variety of gun
+            customization. In those 2 weeks, I was able to create basic movement
+            mechanics, 2 unique weapons, 3 enemies with different behaviors, and
+            a basic graybox level for testing, all while juggling other projects
+            and classes. I am most proud of the enemy behaviors and the weapons.
+            The enemies while appearing simple, have different forms of
+            detection, detection ranges, movement speeds, and damage output. The
+            gun system has 2 guns that can be swapped between, each with their
+            own bullet spread, reload speed, and ammo. The game is still in its
+            prototyping/pre-alpha testing stage, but I am excited to continue
+            working on it and adding more features. The game is still in
+            prototyping/pre-alpha and is being developed in Unity with C#.
+          </p>
+        </div>
+
+        <!-- PUT PLACEHOLDER IMAGE HERE-->
+
+        <div class="untitled-description-2">
+          <p class="untitled-link-1">
+            <a
+              href="https://youtu.be/dQw4w9WgXcQ?si=9PjqgzlsIMtbhWZQ"
+              target="_blank"
+              >I don't have a build ready yet but please enjoy this unrelated
+              video!</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer">
+        <p class="footer-content">
+          Copyright © 2024 by Aaron Bruno. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Website scripts -->
+    <script src="app.js"></script>
+
+    <!-- External scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
