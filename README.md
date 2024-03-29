@@ -1,3 +1,3 @@
-### Hi there 👋
+### Hello there 👋
 
-heres my portfolio: [aaronbruno.github.io](https://aaronbruno.github.io/aaronbruno)
+Heres my portfolio! [https://aaronbruno.github.io/aaronbruno](https://aaronbruno.github.io/aaronbruno)
