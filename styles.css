@@ -845,10 +845,15 @@ nav ul.logo li a {
         padding-right: 0.5rem;    
     }
 
+    .pers-project-title-2 {
+        top: 15%;
+    }
+
     .pers-project-description-1,
     .pers-project-description-2
     {
         font-size: 0.9rem;
+        bottom: -50%;
     }
 
     .prof-project-description-tile-blue,
