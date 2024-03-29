@@ -1162,7 +1162,7 @@ nav ul.logo li a {
     width: 90%;
     min-width: 250px;
     max-width: 800px;
-    height: 170vh;
+    height: 180vh;
     border-radius: 15px;
     border: 2.5px solid var(--black-color);
 
@@ -1297,7 +1297,7 @@ nav ul.logo li a {
     }
 
     .witchcraft-background-box {
-        height: 190vh;
+        height: 200vh;
     }
 }
 
@@ -1366,7 +1366,7 @@ nav ul.logo li a {
     width: 90%;
     min-width: 250px;
     max-width: 800px;
-    height: 170vh;
+    height: 175vh;
     border-radius: 15px;
     border: 2.5px solid var(--black-color);
 
