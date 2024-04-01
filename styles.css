@@ -924,6 +924,71 @@ nav ul.logo li a {
     }
 }
 
+/* --------------- Skills Section --------------- */
+
+.skills {
+    background-color: var(--header-color);
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+}
+
+.skills h3 {
+    font-size: 1rem;
+}
+
+.skills-languages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Updated to 2 columns */
+    grid-template-rows: repeat(1, 1fr); /* Updated to 2 rows */
+    background-color: var(--body-color);
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    row-gap: 18rem;
+    justify-items: center;
+
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.skills-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 1rem;
+
+}
+
+.skills-languages-1 {
+    font-size: 2rem;
+}
+
+.skills-list i {
+    font-size: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    padding: 0.5rem;
+
+}
+
+.skills-list p {
+    font-size: 1.5rem;
+
+    margin: .5rem;
+}
+
+
+
 /* --------------- Resume Section --------------- */
 
 /* --------------- Contact Section --------------- */
