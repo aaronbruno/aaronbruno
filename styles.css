@@ -73,7 +73,7 @@ nav {
     display: grid;
     align-items: center;
     gap: 3.5rem;
-    grid-template-columns: repeat(5, auto); /* Updated to 2 columns */
+    grid-template-columns: repeat(6, auto); /* Updated to 2 columns */
 }
 
 .nav-tile {
@@ -191,7 +191,7 @@ nav ul.logo li a {
 
 
 /* Burger menu style for smaller screens */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     .nav {
         padding: 0.5rem 2.5rem;
     }
