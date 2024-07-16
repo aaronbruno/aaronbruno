@@ -334,9 +334,10 @@ nav ul.logo li a {
     }
 }
 
-/* --------------- Professional Projects Section --------------- */
+/* --------------- Tiles --------------- */
 
-.professional-projects {
+/* Top border for Published Games and Prototypes & Concepts Sections */
+.border-and-title {
     background-color: var(--header-color);
     width: 100%;
     padding: 1.5rem;
@@ -344,19 +345,53 @@ nav ul.logo li a {
     text-align: center;
     color: var(--primary-color);
 }
-
-.professional-projects h2 {
+.border-and-title h2 { /* Big header */
     font-size: 2.5rem;
 }
-
-.professional-projects h3 {
-    font-size: 1rem;
+.border-and-title h3 { /* Small header */
+    font-size: 1.25rem;
 }
 
-.prof-projects {
+/* Colored descriptive tiles for each game tile */
+.tile-description-blue,
+.tile-description-red,
+.tile-description-purple,
+.tile-description-pink,
+.tile-description-green
+{
+    background-color: green;
+    position: relative;
+    border-radius: 5px;
+    justify-content: space-between;
+    text-align: center;
+
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+}
+.tile-description-blue
+{
+    background-color: blue;
+}
+.tile-description-red
+{
+    background-color: red;
+}
+.tile-description-purple
+{
+    background-color: purple;
+}
+.tile-description-pink
+{
+    background-color: rgb(253, 146, 164);
+}
+
+
+/* ----- Grid of highlighted tiles, used in Published Games section ----- */
+.highlight-tiles {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Updated to 2 columns */
-    grid-template-rows: repeat(2, 1fr); /* Updated to 2 rows */
+    grid-template-columns: repeat(1, 1fr);
     background-color: var(--body-color);
     padding-left: 5rem;
     padding-right: 5rem;
@@ -366,10 +401,8 @@ nav ul.logo li a {
     justify-items: center;
 }
 
-.prof-project-tile-1,
-.prof-project-tile-2,
-.prof-project-tile-3,
-.prof-project-tile-4
+/* All highlighted tiles */
+.hl-tile-1
 {
     background-color: var(--primary-color);
     width: 400px;
@@ -382,60 +415,23 @@ nav ul.logo li a {
     justify-content: space-between;
 }
 
-.prof-project-tile-1 {
+/* Individual tile images and siziings */
+.hl-tile-1 {
     background-image: url("assets/images/Ballistic_Icon.png");
     background-size: 120%;
-    background-position: 45%;
+    background-position: 48%;
     transition: background-size 0.3s ease-in-out; /* Add transition for smooth animation */
 }
 
-.prof-project-tile-2 {
-    background-image: url("assets/images/WitchCraft_Icon.png");
-    background-size: 120%;
-    background-position: 45%;
-    transition: background-size 0.3s ease-in-out; /* Add transition for smooth animation */
-}
-
-.prof-project-tile-3 {
-    background-image: url("assets/images/SideHustle_Icon.jpg");
-    background-size: 125%;
-    background-position: 18%;
-    transition: background-size 0.3s ease-in-out; /* Add transition for smooth animation */
-}
-
-.prof-project-tile-4 {
-    background-image: url("assets/images/ChronoCart_Icon.png");
-    background-size: 120%;
-    background-position: 45%;
-    transition: background-size 0.3s ease-in-out; /* Add transition for smooth animation */
-}
-
-.prof-project-tile-3 .prof-project-title {
-    background-color: black;
-    padding: 7.5%;
-    bottom: 0;
-}
-
-.prof-project-tile-3 .prof-project-title-1 {
-    background-color: black;
-    padding: 7.5%;
-    top: 0;
-}
-
-.prof-project-tile-1:hover,
-.prof-project-tile-2:hover,
-.prof-project-tile-3:hover,
-.prof-project-tile-4:hover
+/* Hover effects for all tiles */
+.hl-tile-1:hover
 {
     border: 5px solid var(--lightblue-color);
-    background-size: 125%; /* Zoom in the background image */
+    background-size: 135%; /* Zoom in the background image */
 }
 
-.prof-project-tile-3:hover {
-    background-size: 130%; /* Zoom in the background image */
-}
-
-.prof-project-title {
+/* unused since titles are now in the tiles */
+.hl-tile-title {
     color: var(--primary-color);
     background-color: var(--bg-color);
     padding: 1rem;
@@ -449,7 +445,8 @@ nav ul.logo li a {
     box-sizing: border-box;
 }
 
-.prof-project-description {
+/* Formatting for summary description and bulleted list of contributions */
+.hl-tile-description {
     display: grid;
     grid-template-columns: repeat(5, auto);
     color: var(--primary-color);
@@ -464,45 +461,8 @@ nav ul.logo li a {
     column-gap: 0.5rem;
 }
 
-.prof-project-description-tile-blue,
-.prof-project-description-tile-red,
-.prof-project-description-tile-purple,
-.prof-project-description-tile-pink,
-.prof-project-description-tile-green
-{
-    background-color: green;
-    position: relative;
-    border-radius: 5px;
-    justify-content: space-between;
-    text-align: center;
-
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-    padding-right: 0.2rem;
-    padding-left: 0.2rem;
-}
-
-.prof-project-description-tile-blue
-{
-    background-color: blue;
-}
-
-.prof-project-description-tile-red
-{
-    background-color: red;
-}
-
-.prof-project-description-tile-purple
-{
-    background-color: purple;
-}
-
-.prof-project-description-tile-pink
-{
-    background-color: rgb(253, 146, 164);
-}
-
-.prof-project-description-1 {
+/* Summary description of each game tile */
+.hl-tile-description-1 {
     color: var(--primary-color);
     font-size: 1.1rem;
     position: absolute;
@@ -510,8 +470,134 @@ nav ul.logo li a {
     display: relative;
     box-sizing: border-box;
 }
+/* Bulleted list of contributions for each game tile */
+.hl-tile-description-2 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: -60%;
+    display: relative;
+    box-sizing: border-box;
+}
 
-.prof-project-description-2 {
+
+
+
+/* ----- Grid of regular tiles, used in Prototypes & Concepts section ----- */
+.reg-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    background-color: var(--body-color);
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 18rem;
+    row-gap: 18rem;
+    justify-items: center;
+}
+
+/* All regular tiles */
+.reg-tile-1,
+.reg-tile-2,
+.reg-tile-3
+{
+    background-color: var(--primary-color);
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border-radius: 10px;
+    border: 5px solid var(--black-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Individual tile images and sizings */
+.reg-tile-1 {
+    background-image: url("assets/images/WitchCraft_Icon.png");
+    background-size: 120%;
+    background-position: 45%;
+    transition: background-size 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+.reg-tile-2 {
+    background-image: url("assets/images/SideHustle_Icon.jpg");
+    background-size: 125%;
+    background-position: 18%;
+    transition: background-size 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+.reg-tile-3 {
+    background-image: url("assets/images/ChronoCart_Icon.png");
+    background-size: 120%;
+    background-position: 45%;
+    transition: background-size 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+/* -- Gives the Side Hustle Simulator Tile a border on the top and bottom */
+.reg-tile-2 .reg-tile-title {
+    background-color: black;
+    padding: 7.5%;
+    bottom: 0;
+}
+.reg-tile-2 .reg-tile-title-1 {
+    background-color: black;
+    padding: 7.5%;
+    top: 0;
+}
+
+/* Hover effects for all tiles */
+.reg-tile-1:hover,
+.reg-tile-2:hover,
+.reg-tile-3:hover
+{
+    border: 5px solid var(--lightblue-color);
+    background-size: 125%; /* Zoom in the background image */
+}
+.reg-tile-2:hover {
+    background-size: 130%; /* Zoom in the background image */
+}
+
+/* unused since titles are now in the tiles */
+.reg-tile-title {
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Formatting for summary description and bulleted list of contributions */
+.reg-tile-description {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    color: var(--primary-color);
+    padding: 1rem;
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+    display: relative;
+    box-sizing: border-box;
+
+    column-gap: 0.5rem;
+}
+
+/* Summary description of each game tile */
+.reg-tile-description-1 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: -25%;
+    display: relative;
+    box-sizing: border-box;
+}
+/* Bulleted list of contributions for each game tile */
+.reg-tile-description-2 {
     color: var(--primary-color);
     font-size: 1.1rem;
     position: absolute;
@@ -521,8 +607,20 @@ nav ul.logo li a {
 }
 
 /* FOR SMALLER SCREENS */
+@media screen and (max-width: 1380px) {
+    .reg-tiles {
+        grid-template-columns: repeat(2, 2fr);
+
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 5rem;
+        padding-bottom: 18rem;
+        row-gap: 18rem;
+    }
+}
+
 @media screen and (max-width: 900px) {
-    .prof-projects {
+    .reg-tiles {
         grid-template-columns: 1fr; /* Switch to 1 column */
         grid-template-rows: auto; /* Switch to 4 rows */
 
@@ -535,7 +633,7 @@ nav ul.logo li a {
 }
 
 @media screen and (max-width: 410px) {
-    .prof-projects {
+    .reg-tiles {
         grid-template-columns: 1fr; /* Switch to 1 column */
         grid-template-rows: auto; /* Switch to 4 rows */
 
@@ -546,16 +644,15 @@ nav ul.logo li a {
         row-gap: 17rem;
     }
     
-    .prof-project-tile-1,
-    .prof-project-tile-2,
-    .prof-project-tile-3,
-    .prof-project-tile-4
+    .reg-tile-1,
+    .reg-tile-2,
+    .reg-tile-3
     {
         width: 300px;
         height: 300px;
     }
 
-    .prof-project-description {
+    .reg-tile-description {
         bottom: -18%;
         font-size: 0.9rem;
 
@@ -564,22 +661,22 @@ nav ul.logo li a {
         padding-right: 0.5rem;
     }
 
-    .prof-project-description-1 {
+    .reg-tile-description-1 {
         bottom: -25%;
         font-size: 0.9rem;
     }
 
-    .prof-project-description-2
+    .reg-tile-description-2
     {
         bottom: -65%;
         font-size: 0.9rem;
     }
 
-    .prof-project-description-tile-blue,
-    .prof-project-description-tile-red,
-    .prof-project-description-tile-purple,
-    .prof-project-description-tile-pink,
-    .prof-project-description-tile-green
+    .tile-description-blue,
+    .tile-description-red,
+    .tile-description-purple,
+    .tile-description-pink,
+    .tile-description-green
     {
         padding-top: 0.3rem;
         padding-bottom: 0.3rem;
@@ -589,7 +686,7 @@ nav ul.logo li a {
 }
 
 @media screen and (max-width: 300px) {
-    .prof-projects {
+    .reg-tiles {
         grid-template-columns: 1fr; /* Switch to 1 column */
         grid-template-rows: auto; /* Switch to 4 rows */
 
@@ -600,16 +697,15 @@ nav ul.logo li a {
         row-gap: 17rem;
     }
     
-    .prof-project-tile-1,
-    .prof-project-tile-2,
-    .prof-project-tile-3,
-    .prof-project-tile-4
+    .reg-tile-1,
+    .reg-tile-2,
+    .reg-tile-3
     {
         width: 250px;
         height: 250px;
     }
 
-    .prof-project-description {
+    .reg-tile-description {
         bottom: -18%;
         font-size: 0.9rem;
 
@@ -618,22 +714,22 @@ nav ul.logo li a {
         padding-right: 0.5rem;
     }
 
-    .prof-project-description-1 {
+    .reg-tile-description-1 {
         bottom: -35%;
         font-size: 0.9rem;
     }
 
-    .prof-project-description-2
+    .reg-tile-description-2
     {
         bottom: -100%;
         font-size: 0.9rem;
     }
 
-    .prof-project-description-tile-blue,
-    .prof-project-description-tile-red,
-    .prof-project-description-tile-purple,
-    .prof-project-description-tile-pink,
-    .prof-project-description-tile-green
+    .tile-description-blue,
+    .tile-description-red,
+    .tile-description-purple,
+    .tile-description-pink,
+    .tile-description-green
     {
         padding-top: 0.3rem;
         padding-bottom: 0.3rem;
@@ -647,24 +743,6 @@ nav ul.logo li a {
 
 
 /* --------------- Personal Projects Section --------------- */
-
-.personal-projects {
-    background-color: var(--header-color);
-    width: 100%;
-    padding: 1.5rem;
-    box-sizing: border-box;
-    text-align: center;
-    color: var(--primary-color);
-}
-
-.personal-projects h2 {
-    font-size: 2.5rem;
-}
-
-.personal-projects h3 {
-    font-size: 1rem;
-}
-
 .pers-projects {
     display: grid;
     grid-template-columns: repeat(1, 1fr); /* Updated to 2 columns */
@@ -856,11 +934,11 @@ nav ul.logo li a {
         bottom: -50%;
     }
 
-    .prof-project-description-tile-blue,
-    .prof-project-description-tile-red,
-    .prof-project-description-tile-purple,
-    .prof-project-description-tile-pink,
-    .prof-project-description-tile-green
+    .tile-description-blue,
+    .tile-description-red,
+    .tile-description-purple,
+    .tile-description-pink,
+    .tile-description-green
     {
         padding-top: 0.3rem;
         padding-bottom: 0.3rem;
